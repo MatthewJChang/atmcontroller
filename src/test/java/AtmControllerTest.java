@@ -32,9 +32,6 @@ public class AtmControllerTest {
         assert result == true;
         accountIDS = atmController.getAccountIDSForUser();
         assert accountIDS != null;
-        for (String s: accountIDS) {
-            System.out.println(s);
-        }
         assert accountIDS.containsAll(new ArrayList<>(Arrays.asList("YWOX3028", "IBPJ3284", "IRHP31110", "IWGU20045")));
         accountResult = atmController.chooseAccount("YWOX3028");
         assert accountResult == true;
